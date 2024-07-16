@@ -19,7 +19,7 @@ def generate_calculate_summary(gene):
 
 # Define your main function
 def main():
-    myfile = "Megagraphexport.csv"
+    myfile = "Grouped_line_plotImport.csv"
     outfile = "generated_r_code.R"
     data_list = []
 
