@@ -3,7 +3,6 @@ row_headers_rplp1 <- "RPLP1"
 row_headers_rplp2 <- "RPLP2"
 row_headers_rps19 <- "RPS19"
 row_headers_eif1 <- "EIF1"
-row_headers_ddx3x <- "DDX3X"
 row_headers_hnrnpc <- "HNRNPC"
 row_headers_eif3e <- "EIF3E"
 row_headers_dhx36 <- "DHX36"
@@ -24,6 +23,7 @@ row_headers_fkbp10 <- "FKBP10"
 row_headers_pdcd4 <- "PDCD4"
 row_headers_slc3a2 <- "SLC3A2"
 row_headers_eif2a <- "EIF2A"
+row_headers_ddx3x <- "DDX3X"
 
 col_headers_rpl5 <- c("GSM2360175", "GSM2360176", "GSM2360179", "GSM2360180")
 control_rpl5 <- c("notcontrol", "notcontrol", "control", "control")
@@ -39,9 +39,6 @@ control_rps19 <- c("notcontrol", "notcontrol", "control", "control")
 
 col_headers_eif1 <- c("GSM2327826", "GSM2327828")
 control_eif1 <- c("notcontrol", "control")
-
-col_headers_ddx3x <- c("GSM4258310", "GSM4258311", "GSM4258312", "GSM4258314", "GSM4258315", "GSM4258316", "GSM4258317", "GSM4258319")
-control_ddx3x <- c("control", "control", "control", "notcontrol", "notcontrol", "notcontrol", "notcontrol", "notcontrol")
 
 col_headers_hnrnpc <- c("GSM2204389", "GSM2204390", "GSM2204391", "GSM2204392", "GSM2204393", "GSM2204394", "GSM2204395", "GSM2204396")
 control_hnrnpc <- c("control", "control", "control", "control", "notcontrol", "notcontrol", "notcontrol", "notcontrol")
@@ -103,12 +100,14 @@ control_slc3a2 <- c("control", "notcontrol")
 col_headers_eif2a <- c("GSM5291928", "GSM5291929", "GSM5291930", "GSM5291931", "GSM5291932", "GSM5291933")
 control_eif2a <- c("control", "control", "notcontrol", "notcontrol", "notcontrol", "notcontrol")
 
+col_headers_ddx3x <- c("GSM4258310", "GSM4258311", "GSM4258312", "GSM4258314", "GSM4258315", "GSM4258316", "GSM4258317", "GSM4258319")
+control_ddx3x <- c("control", "control", "control", "notcontrol", "notcontrol", "notcontrol", "notcontrol", "notcontrol")
+
 data_rpl5 <- create_gene_data("rpl5", col_headers_rpl5, row_headers_rpl5, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_rpl5)
 data_rplp1 <- create_gene_data("rplp1", col_headers_rplp1, row_headers_rplp1, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_rplp1)
 data_rplp2 <- create_gene_data("rplp2", col_headers_rplp2, row_headers_rplp2, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_rplp2)
 data_rps19 <- create_gene_data("rps19", col_headers_rps19, row_headers_rps19, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_rps19)
 data_eif1 <- create_gene_data("eif1", col_headers_eif1, row_headers_eif1, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_eif1)
-data_ddx3x <- create_gene_data("ddx3x", col_headers_ddx3x, row_headers_ddx3x, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_ddx3x)
 data_hnrnpc <- create_gene_data("hnrnpc", col_headers_hnrnpc, row_headers_hnrnpc, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_hnrnpc)
 data_eif3e <- create_gene_data("eif3e", col_headers_eif3e, row_headers_eif3e, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_eif3e)
 data_dhx36 <- create_gene_data("dhx36", col_headers_dhx36, row_headers_dhx36, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_dhx36)
@@ -129,13 +128,13 @@ data_fkbp10 <- create_gene_data("fkbp10", col_headers_fkbp10, row_headers_fkbp10
 data_pdcd4 <- create_gene_data("pdcd4", col_headers_pdcd4, row_headers_pdcd4, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_pdcd4)
 data_slc3a2 <- create_gene_data("slc3a2", col_headers_slc3a2, row_headers_slc3a2, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_slc3a2)
 data_eif2a <- create_gene_data("eif2a", col_headers_eif2a, row_headers_eif2a, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_eif2a)
+data_ddx3x <- create_gene_data("ddx3x", col_headers_ddx3x, row_headers_ddx3x, Ribosomeprofiling, RNAsequencing, Translationefficiency, control_ddx3x)
 
 summary_data_rpl5 <- calculate_summary(data_rpl5, "rpl5")
 summary_data_rplp1 <- calculate_summary(data_rplp1, "rplp1")
 summary_data_rplp2 <- calculate_summary(data_rplp2, "rplp2")
 summary_data_rps19 <- calculate_summary(data_rps19, "rps19")
 summary_data_eif1 <- calculate_summary(data_eif1, "eif1")
-summary_data_ddx3x <- calculate_summary(data_ddx3x, "ddx3x")
 summary_data_hnrnpc <- calculate_summary(data_hnrnpc, "hnrnpc")
 summary_data_eif3e <- calculate_summary(data_eif3e, "eif3e")
 summary_data_dhx36 <- calculate_summary(data_dhx36, "dhx36")
@@ -156,13 +155,13 @@ summary_data_fkbp10 <- calculate_summary(data_fkbp10, "fkbp10")
 summary_data_pdcd4 <- calculate_summary(data_pdcd4, "pdcd4")
 summary_data_slc3a2 <- calculate_summary(data_slc3a2, "slc3a2")
 summary_data_eif2a <- calculate_summary(data_eif2a, "eif2a")
+summary_data_ddx3x <- calculate_summary(data_ddx3x, "ddx3x")
 
 colnames(summary_data_rpl5) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_rplp1) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_rplp2) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_rps19) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_eif1) <- c("Control", "RNAseq", "Riboprof", "Transeff")
-colnames(summary_data_ddx3x) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_hnrnpc) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_eif3e) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_dhx36) <- c("Control", "RNAseq", "Riboprof", "Transeff")
@@ -183,15 +182,15 @@ colnames(summary_data_fkbp10) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_pdcd4) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_slc3a2) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 colnames(summary_data_eif2a) <- c("Control", "RNAseq", "Riboprof", "Transeff")
+colnames(summary_data_ddx3x) <- c("Control", "RNAseq", "Riboprof", "Transeff")
 
 combined_data <- rbind(
   cbind(summary_data_rpl5, Gene = "RPL5", Bufferingscore = "1"),
   cbind(summary_data_rplp1, Gene = "RPLP1", Bufferingscore = "1"),
   cbind(summary_data_rplp2, Gene = "RPLP2", Bufferingscore = "1"),
-  cbind(summary_data_rps19, Gene = "RPS19", Bufferingscore = "2"),
-  cbind(summary_data_eif1, Gene = "EIF1", Bufferingscore = "2"),
-  cbind(summary_data_ddx3x, Gene = "DDX3X", Bufferingscore = "2"),
-  cbind(summary_data_hnrnpc, Gene = "HNRNPC", Bufferingscore = "2"),
+  cbind(summary_data_rps19, Gene = "RPS19", Bufferingscore = "1"),
+  cbind(summary_data_eif1, Gene = "EIF1", Bufferingscore = "1"),
+  cbind(summary_data_hnrnpc, Gene = "HNRNPC", Bufferingscore = "1"),
   cbind(summary_data_eif3e, Gene = "EIF3E", Bufferingscore = "2"),
   cbind(summary_data_dhx36, Gene = "DHX36", Bufferingscore = "3"),
   cbind(summary_data_dhx9, Gene = "DHX9", Bufferingscore = "3"),
@@ -210,5 +209,6 @@ combined_data <- rbind(
   cbind(summary_data_fkbp10, Gene = "FKBP10", Bufferingscore = "3"),
   cbind(summary_data_pdcd4, Gene = "PDCD4", Bufferingscore = "3"),
   cbind(summary_data_slc3a2, Gene = "SLC3A2", Bufferingscore = "3"),
-  cbind(summary_data_eif2a, Gene = "EIF2A", Bufferingscore = "3"))
+  cbind(summary_data_eif2a, Gene = "EIF2A", Bufferingscore = "3"),
+  cbind(summary_data_ddx3x, Gene = "DDX3X", Bufferingscore = "3"))
 
